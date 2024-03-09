@@ -1,4 +1,4 @@
-# problem Statement: minimum common value from given two list
+# problem Statement: minimum common value from given two list in LeetCode
 class Solution:
     def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
         nums1 = set(nums1)
