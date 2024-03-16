@@ -1,4 +1,5 @@
-# problem Statement: check frequency can be equal 
+# problem Statement: check frequency can be equal
+
 class Solution:
     
     def isSame(self, freq, size):
