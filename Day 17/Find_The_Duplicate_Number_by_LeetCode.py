@@ -17,7 +17,34 @@
 # Input: nums = [3,3,3,3,3]
 # Output: 3
 
-# ___________________________________________________________________________CODE IS HERE_____________________________________________________________________________________
+# _________________________________________________CODE WITH TIME SPACE COMPLEXITY O(1)____________________________________________________
+
+class Solution(object):
+    def findDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        slow = nums[0]  # point out first index
+        fast = nums[nums[0]]  # point out the index represented
+                              # by the value of element at slow-th index
+
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+
+        # Reset one of the pointers to the beginning
+        slow = 0
+
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[fast]
+
+        # At this point, both pointers meet at the start of the cycle
+        return slow
+
+
+#________________________________________________CODE NOT WITH SPACE COMPLEXITY O(1)____________________________________________________
 
 class Solution(object):
     def findDuplicate(self, nums):
