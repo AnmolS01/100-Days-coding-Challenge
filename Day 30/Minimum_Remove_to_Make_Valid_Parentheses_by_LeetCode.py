@@ -1,6 +1,8 @@
 # Problem Statement: 1249. Minimum Remove to Make Valid Parentheses
 
-stack = []
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        stack = []
         to_remove = set()
         for i, char in enumerate(s):
             if char == '(':
@@ -19,3 +21,4 @@ stack = []
                 result += char
     
         return result
+
